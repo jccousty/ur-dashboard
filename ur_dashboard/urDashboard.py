@@ -1,5 +1,6 @@
 import socket
 
+
 class URDashboard:
     """
     Create a communication using TCP/IP with the dashboard server interface of a Universal Robot e-series.
