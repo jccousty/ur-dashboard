@@ -3,7 +3,7 @@ import socket
 
 class URDashboard:
     """
-    Salut JC Mobile, tu lis ma doc ?
+    Salut Edy Mobile, tu lis ma doc ?
 
     Create a communication using TCP/IP with the dashboard server interface of a Universal Robot e-series.
 
