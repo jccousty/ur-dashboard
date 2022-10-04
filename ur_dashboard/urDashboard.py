@@ -3,6 +3,8 @@ import socket
 
 class URDashboard:
     """
+    Salut JC Mobile, tu lis ma doc ?
+
     Create a communication using TCP/IP with the dashboard server interface of a Universal Robot e-series.
 
     :param ipAddress: the ip address of the Universal Robot.
