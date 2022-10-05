@@ -13,6 +13,7 @@ class URDashboard:
 
     def __init__(self, ipAddress):
         self.ipAddress = ipAddress
+        self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     def connect(self):
         """
@@ -22,4 +23,6 @@ class URDashboard:
         :rtype: string
         """
 
-        return "Connection OK"
+        self.server.connect((self.ipAddress, 29999))
+
+        return self.server.recv(1024)
