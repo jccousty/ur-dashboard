@@ -1,5 +1,7 @@
 import socket
 
+DASHBOARD_PORT = 29999
+
 
 class URDashboard:
     """
@@ -23,6 +25,21 @@ class URDashboard:
         :rtype: string
         """
 
-        self.server.connect((self.ipAddress, 29999))
+        self.server.connect((self.ipAddress, DASHBOARD_PORT))
+
+        return self.server.recv(1024)
+
+    def load(self, programName):
+        """
+        Load a myProgram.urp file already present on the robot.
+
+        :param programName: name of the .urp program (without the .urp)
+        :type programName: string
+
+        :return:
+        :rtype: string
+        """
+
+        self.server.sendall(programName + ".urp\n")
 
         return self.server.recv(1024)
