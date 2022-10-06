@@ -5,8 +5,6 @@ DASHBOARD_PORT = 29999
 
 class URDashboard:
     """
-    Salut JC Mobile, tu lis ma doc ?
-
     Create a communication using TCP/IP with the dashboard server interface of a Universal Robot e-series.
 
     :param ipAddress: the ip address of the Universal Robot.
